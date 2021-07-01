@@ -4,6 +4,10 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start:dev": "cross-env DEBUG=knex:query NODE_ENV=development nodemon ./bin/www",
+    "start": "node ./app.js",
+    "start:development": "SET NODE_ENV=development nodemon --inspect ./bin/www",
+    "dev": "nodemon ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,7 +21,16 @@
   },
   "homepage": "https://github.com/sow04/doctor_appointment_scheduling_backend#readme",
   "dependencies": {
+    "bookshelf": "^1.2.0",
+    "cross-env": "^7.0.3",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "knex": "^0.95.6",
+    "pg": "^8.6.0",
+    "postgres": "^1.0.2",
+    "win-node-env": "^0.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.9"
   }
 }
